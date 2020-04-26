@@ -1,5 +1,7 @@
 package request
 
+import "github.com/dgrijalva/jwt-go"
+
 type RigisterStruct struct {
 	Username string `json:"username" binding:"required" `
 	Password string `json:"password" binding:"required" `
@@ -13,4 +15,10 @@ type LoginStruct struct {
 type CaptchaResponse struct {
 	Path      string `json:"path" `
 	CaptchaId string `json:"captchaId"`
+}
+
+// Custom claims structure
+type CustomClaims struct {
+	Username string
+	jwt.StandardClaims
 }

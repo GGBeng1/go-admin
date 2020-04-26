@@ -1,7 +1,7 @@
 package main
 
 import (
-	initrouter "hello/router"
+	"hello/initall"
 	"net/http"
 	"time"
 )
@@ -31,7 +31,7 @@ func main() {
 	// f, _ := os.Create("gin.log")
 	// gin.DefaultWriter = io.MultiWriter(f)
 	// gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
-	Router := initrouter.Routers()
+	Router := initall.Routers()
 	// r.Run(":8081")
 	s := &http.Server{
 		Addr:           ":8081",
