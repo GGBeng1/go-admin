@@ -1,11 +1,12 @@
 package v1
 
 import (
-	"fmt"
+	"hello/global"
 	"hello/helper"
 	"hello/middleware"
 	"hello/model"
 	"hello/model/request"
+	"hello/until"
 	"net/http"
 	"time"
 
@@ -15,14 +16,31 @@ import (
 )
 
 func Register(c *gin.Context) {
-	var R request.RigisterStruct
-	if err := c.ShouldBindJSON(&R); err != nil {
+	var user model.User
+	var resUser model.ResUser
+	if err := c.ShouldBindJSON(&user); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-	fmt.Println(R)
+	// fmt.Println(global.DB.HasTable(user))
+	// fmt.Println(user)
+	userInfo := global.DB.Where("username = ?", user.Username).First(&user).RecordNotFound()
+	// fmt.Println(userInfo)
+	if !userInfo {
+		helper.FailedWithMsg("用户名已存在", c)
+		return
+	} else {
+		err1 := global.DB.Create(&user).Error
+		if err1 != nil {
+			helper.FailedWithMsg("创建失败", c)
+			return
+		} else {
+			until.CopyFields(&resUser, user, "Username", "Nickname")
+			helper.SuccessWithData(resUser, c)
+		}
+	}
 	// c.JSON(http.StatusOK, gin.H{"status": R})
-	helper.SuccessWithMsg("注册成功", c)
+
 }
 func Login(c *gin.Context) {
 	var L request.LoginStruct
