@@ -1,6 +1,7 @@
 package main
 
 import (
+	"hello/global"
 	"hello/initall"
 	"net/http"
 	"time"
@@ -9,6 +10,7 @@ import (
 func main() {
 	Router := initall.Routers()
 	initall.Mysql()
+	defer global.DB.Close()
 	s := &http.Server{
 		Addr:           ":8081",
 		Handler:        Router,

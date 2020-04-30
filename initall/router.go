@@ -9,7 +9,7 @@ import (
 
 func Routers() *gin.Engine {
 	Router := gin.Default()
-	Router.Use(middleware.Cors())
+	Router.Use(middleware.Cors()).Use(middleware.LoggerToFile())
 	ApiGroup := Router.Group("")
 	router.InitBaseRouter(ApiGroup)
 	router.InitUserRouter(ApiGroup)
