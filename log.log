@@ -1,1 +1,6 @@
 {"all_time":295112,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha","status_code":200,"time":"2020-04-30 14:23:13"}
+{"all_time":267827,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha","status_code":200,"time":"2020-05-06 16:34:19"}
+{"all_time":107673,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha/Z27LFxNzavYeNm7tc82P.png","status_code":200,"time":"2020-05-06 16:35:51"}
+{"all_time":46335,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha","status_code":200,"time":"2020-05-06 16:36:04"}
+{"all_time":1718429,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha/cGEOPPWVX1tZUVp4sIS9.png","status_code":200,"time":"2020-05-06 16:36:25"}
+{"all_time":336911,"client_ip":"::1","level":"info","msg":"","req_method":"POST","req_url":"/base/login","status_code":200,"time":"2020-05-06 16:37:09"}

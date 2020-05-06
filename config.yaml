@@ -1,0 +1,20 @@
+# jwt configuration
+jwt:
+  signing-key: "GGbeng"
+
+# mysql connect configuration
+mysql:
+  username: root
+  password: "root"
+  path: "127.0.0.1:3306"
+  db-name: "ggbeng"
+  config: "charset=utf8&parseTime=True&loc=Local"
+  max-idle-conns: 10
+  max-open-conns: 10
+  log-mode: true
+
+# captcha configuration
+captcha:
+  key-long: 4
+  img-width: 120
+  img-height: 40

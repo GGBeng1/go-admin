@@ -55,7 +55,7 @@ func Login(c *gin.Context) {
 }
 func tokenNext(c *gin.Context, user request.LoginStruct) {
 	j := &middleware.JWT{
-		[]byte(model.JwtSignStruct), // 唯一签名
+		[]byte(global.Server.JWT.SigningKey), // 唯一签名
 	}
 	clams := request.CustomClaims{
 		Username: user.Username,

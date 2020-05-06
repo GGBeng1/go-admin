@@ -3,6 +3,7 @@ package v1
 import (
 	"bytes"
 	"fmt"
+	"hello/global"
 	"hello/helper"
 	"hello/model/request"
 	"net/http"
@@ -15,8 +16,7 @@ import (
 )
 
 func GetCaptcha(c *gin.Context) {
-	length := 4
-	captchaId := captcha.NewLen(length)
+	captchaId := captcha.NewLen(global.Server.Captcha.KeyLong)
 	var CaptchaMsg request.CaptchaResponse
 	CaptchaMsg.Path = "/captcha/" + captchaId + ".png"
 	CaptchaMsg.CaptchaId = captchaId
@@ -45,7 +45,7 @@ func ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 	lang := strings.ToLower(r.FormValue("lang"))
 	download := path.Base(dir) == "download"
-	if Serve(w, r, id, ext, lang, download, captcha.StdWidth, captcha.StdHeight) == captcha.ErrNotFound {
+	if Serve(w, r, id, ext, lang, download, global.Server.Captcha.ImgWidth, global.Server.Captcha.ImgHeight) == captcha.ErrNotFound {
 		http.NotFound(w, r)
 	}
 }

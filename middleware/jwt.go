@@ -2,8 +2,8 @@ package middleware
 
 import (
 	"errors"
+	"hello/global"
 	"hello/helper"
-	"hello/model"
 	"hello/model/request"
 
 	"github.com/dgrijalva/jwt-go"
@@ -52,7 +52,7 @@ func JWTAuth() gin.HandlerFunc {
 
 func NewJwt() *JWT {
 	return &JWT{
-		[]byte(model.JwtSignStruct),
+		[]byte(global.Server.JWT.SigningKey),
 	}
 }
 

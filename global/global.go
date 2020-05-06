@@ -1,7 +1,14 @@
 package global
 
-import "github.com/jinzhu/gorm"
+import (
+	"hello/model"
+
+	"github.com/jinzhu/gorm"
+	"github.com/spf13/viper"
+)
 
 var (
-	DB *gorm.DB
+	DB     *gorm.DB
+	Conf   *viper.Viper
+	Server model.Server
 )
