@@ -4,3 +4,15 @@
 {"all_time":46335,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha","status_code":200,"time":"2020-05-06 16:36:04"}
 {"all_time":1718429,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha/cGEOPPWVX1tZUVp4sIS9.png","status_code":200,"time":"2020-05-06 16:36:25"}
 {"all_time":336911,"client_ip":"::1","level":"info","msg":"","req_method":"POST","req_url":"/base/login","status_code":200,"time":"2020-05-06 16:37:09"}
+{"all_time":282982,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha","status_code":200,"time":"2020-12-15 11:23:12"}
+{"all_time":96654,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha/Lk15LvfVEREhBoYqige0","status_code":404,"time":"2020-12-15 11:23:33"}
+{"all_time":88842,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha","status_code":200,"time":"2020-12-15 11:23:43"}
+{"all_time":117,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/captcha/WE2sDqKm5e1JwQKP02oj.png","status_code":404,"time":"2020-12-15 11:23:55"}
+{"all_time":113,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/captcha/WE2sDqKm5e1JwQKP02oj","status_code":404,"time":"2020-12-15 11:24:01"}
+{"all_time":33629,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha","status_code":200,"time":"2020-12-15 11:24:09"}
+{"all_time":3777552,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha/rceSawUMn2HNdISterA9.png","status_code":200,"time":"2020-12-15 11:24:58"}
+{"all_time":273607,"client_ip":"::1","level":"info","msg":"","req_method":"POST","req_url":"/base/login","status_code":200,"time":"2020-12-15 11:26:26"}
+{"all_time":115484,"client_ip":"::1","level":"info","msg":"","req_method":"POST","req_url":"/base/login","status_code":200,"time":"2020-12-15 11:26:39"}
+{"all_time":42278,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha","status_code":200,"time":"2020-12-15 11:26:46"}
+{"all_time":875356,"client_ip":"::1","level":"info","msg":"","req_method":"GET","req_url":"/base/captcha/PxZbWAfGMkMrExZgZ1DB.png","status_code":200,"time":"2020-12-15 11:26:53"}
+{"all_time":214577,"client_ip":"::1","level":"info","msg":"","req_method":"POST","req_url":"/base/login","status_code":200,"time":"2020-12-15 11:27:05"}
