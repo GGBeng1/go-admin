@@ -1,22 +1,3 @@
-package main
-
-import (
-	"hello/global"
-	"hello/initall"
-	"net/http"
-	"time"
-)
-
-func main() {
-	Router := initall.Routers()
-	initall.Mysql()
-	defer global.DB.Close()
-	s := &http.Server{
-		Addr:           ":8081",
-		Handler:        Router,
-		ReadTimeout:    10 * time.Second,
-		WriteTimeout:   10 * time.Second,
-		MaxHeaderBytes: 1 << 20,
-	}
-	s.ListenAndServe()
-}
+2021-10-01T14:18:00+08:00
+随机数:13871
+提交次数:1
