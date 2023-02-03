@@ -11,6 +11,7 @@ func main() {
 	Router := initall.Routers()
 	initall.Mysql()
 	defer global.DB.Close()
+	// 启动服务
 	s := &http.Server{
 		Addr:           ":8081",
 		Handler:        Router,
